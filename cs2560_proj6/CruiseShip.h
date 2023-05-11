@@ -20,6 +20,7 @@ public:
 	CruiseShip& operator++();        // prefix
 	CruiseShip operator++(int);      // postfix
 
+	// Overridden print
 	void print() const override;
 };
 
