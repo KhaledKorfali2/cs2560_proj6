@@ -6,19 +6,25 @@
 class Ship
 {
 private:
-    std::string name;
-    std::string yearBuilt;
+	std::string shipName;
+	std::string yearBuilt;
 
 public:
-    Ship();
-    Ship(std::string n, std::string y);
-    virtual ~Ship();
-    std::string getName() const;
-    void setName(std::string n);
-    std::string getYearBuilt() const;
-    void setYearBuilt(std::string y);
-    virtual void print() const;
+	//Constructor
+	Ship(std::string shipName = "", std::string yearBuilt = "");
 
-    friend std::ostream& operator<<(std::ostream& os, const Ship& ship);
-    friend std::istream& operator>>(std::istream& is, Ship& ship);
+	//Accessors
+	std::string getName() const;
+	std::string getYearBuilt() const;
+
+	// Mutators
+	void setName(std::string shipName);
+	void setYearBuilt(std::string yearBuilt);
+
+	//Virtual Functions
+	virtual void print() const;
+
+	// Overloaded operators
+	friend std::ostream& operator<<(std::ostream& os, const Ship& ship);
+	friend std::istream& operator>>(std::istream& is, Ship& ship);
 };

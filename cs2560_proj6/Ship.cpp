@@ -1,59 +1,51 @@
 #include "Ship.h"
 
-Ship::Ship()
+Ship::Ship(std::string shipName, std::string yearBuilt)
 {
-    name = "";
-    yearBuilt = "";
+	this->shipName = shipName;
+	this->yearBuilt = yearBuilt;
 }
 
-Ship::Ship(std::string n, std::string y)
-{
-    name = n;
-    yearBuilt = y;
-}
-
-Ship::~Ship()
-{
-}
 
 std::string Ship::getName() const
 {
-    return name;
+	return shipName;
 }
 
-void Ship::setName(std::string n)
+void Ship::setName(std::string shipName)
 {
-    name = n;
+	this->shipName = shipName;
 }
 
 std::string Ship::getYearBuilt() const
 {
-    return yearBuilt;
+	return yearBuilt;
 }
 
-void Ship::setYearBuilt(std::string y)
+void Ship::setYearBuilt(std::string yearBuilt)
 {
-    yearBuilt = y;
+	this->yearBuilt = yearBuilt;
 }
 
 void Ship::print() const
 {
-    std::cout << "Ship: " << name << ", year built: " << yearBuilt << std::endl;
+	std::cout << "Ship Name: " << shipName << std::endl
+		<< "Year Built: " << yearBuilt << std::endl;
 }
 
 std::ostream& operator<<(std::ostream& os, const Ship& ship)
 {
-    os << "Ship: " << ship.name << ", year built: " << ship.yearBuilt;
-    return os;
+	ship.print();
+	return os;
 }
 
 std::istream& operator>>(std::istream& is, Ship& ship)
 {
-    std::cout << "Enter ship name: ";
-    std::getline(is, ship.name);
+	std::cout << "Enter ship name: ";
+	std::getline(is, ship.shipName);
 
-    std::cout << "Enter year built: ";
-    std::getline(is, ship.yearBuilt);
+	std::cout << "Enter year built: ";
+	std::getline(is, ship.yearBuilt);
 
-    return is;
+	return is;
 }
