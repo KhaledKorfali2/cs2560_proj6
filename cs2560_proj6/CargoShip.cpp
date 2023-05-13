@@ -108,7 +108,10 @@ CargoShip CargoShip::operator++(int)
 // Print method to display the CargoShip object's information
 void CargoShip::print() const
 {
-	std::cout << "CargoShip Name: " << getName() << std::endl
+
+	std::cout << "CargoShip(\"" << getName() << "\"," << getYearBuilt() << "," << getCargoCapacity() << ")" << std::endl;
+
+	/*std::cout << "CargoShip Name: " << getName() << std::endl
 		<< "Year Built: " << getYearBuilt() << std::endl
-	<< "Cargo Capacity: " << getCargoCapacity() << " tons" << std::endl;
+	<< "Cargo Capacity: " << getCargoCapacity() << " tons" << std::endl;*/
 }

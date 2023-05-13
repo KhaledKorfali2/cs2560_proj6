@@ -55,8 +55,10 @@ void Ship::setYearBuilt(std::string yearBuilt)
 // Virtual function to print the ship details
 void Ship::print() const
 {
-	std::cout << "Ship Name: " << shipName << std::endl
-		<< "Year Built: " << yearBuilt << std::endl;
+	std::cout << "Ship(\"" << shipName << "\"," << yearBuilt << ")" << std::endl;
+
+	/*std::cout << "Ship Name: " << shipName << std::endl
+		<< "Year Built: " << yearBuilt << std::endl;*/
 }
 
 // Overloaded operator to output ship objects

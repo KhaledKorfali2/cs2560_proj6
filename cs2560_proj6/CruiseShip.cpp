@@ -110,7 +110,9 @@ CruiseShip CruiseShip::operator++(int)
 // Print method to display the CruiseShip object's information
 void CruiseShip::print() const
 {
-	std::cout << "CruiseShip Name: " << getName() << std::endl
+	std::cout << "CruiseShip(\"" << getName() << "\"," << getYearBuilt() << "," << getMaxPassengers() << ")" << std::endl;
+
+	/*std::cout << "CruiseShip Name: " << getName() << std::endl
 		<< "Year Built: " << getYearBuilt() << std::endl
-		<< "Max Passangers: " << maxPassengers << std::endl;
+		<< "Max Passangers: " << maxPassengers << std::endl;*/
 }
