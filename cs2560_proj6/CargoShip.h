@@ -11,6 +11,7 @@
 //		overloaded operators. The program also includes overloaded insertion, extraction,
 //		addition, and increment operators, as well as an overridden print() method to print
 //		additional information.
+//		All mutator and accessor functions are inilne.
 //
 
 #include "Ship.h"
@@ -23,11 +24,11 @@ public:
 	// Constructor that accepts the ship name, year built, and cargo capacity
 	CargoShip(std::string shipName = "", std::string yearBuilt = "", int cargoCap = 0);
 
-	// Accessor method for getting the cargo capacity
-	int getCargoCapacity() const;
+	// Inline Accessor method for getting the cargo capacity
+	inline int getCargoCapacity() const { return cargoCap; };
 
-	// Mutator method for setting the cargo capacity
-	void setCargoCapacity(int cargoCap);
+	// Inline Mutator method for setting the cargo capacity
+	inline void setCargoCapacity(int cargoCap) { this->cargoCap = cargoCap; };
 
 
 	// Overloading operators

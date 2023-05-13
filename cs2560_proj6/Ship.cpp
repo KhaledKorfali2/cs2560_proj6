@@ -8,7 +8,8 @@
 //		This program defines a class called "Ship" that stores information about a ship, including
 //		its name and the year it was built. The class includes accessor and mutator functions to
 //		get and set the ship name and year built, as well as a virtual function to print the ship details.
-//		The class also includes overloaded operators to input and output ship objects.
+//		The class also includes overloaded operators to input and output ship objects. 
+//		All mutator and accessor functions are inilne.
 //
 //
 
@@ -21,6 +22,11 @@ Ship::Ship(std::string shipName, std::string yearBuilt)
 	this->yearBuilt = yearBuilt;
 }
 
+/*
+	Note: All mutator and accessor funtions are defined in Ship.h
+*/
+
+/*
 // Accessor function to get the ship name
 std::string Ship::getName() const
 {
@@ -44,6 +50,7 @@ void Ship::setYearBuilt(std::string yearBuilt)
 {
 	this->yearBuilt = yearBuilt;
 }
+*/
 
 // Virtual function to print the ship details
 void Ship::print() const

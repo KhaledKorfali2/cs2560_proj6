@@ -11,6 +11,7 @@
 //		has methods to access and modify that variable. It also overloads operators
 //		for I/O, addition, and increment. Finally, it overrides the print() method
 //		inherited from the Ship class to print additional information.
+//		All mutator and accessor functions are inilne.
 //
 //
 
@@ -25,11 +26,11 @@ public:
 	//Constructor that initializes the member variables with optional parameters
 	CruiseShip(std::string shipName = "", std::string yearBuilt = "", int maxPassengers = 0);
 
-	//Accessor function to get the maximum passengers
-	int getMaxPassengers() const;
+	//Inline Accessor function to get the maximum passengers
+	inline int getMaxPassengers() const { return maxPassengers; };
 
-	//Mutator function to set the maximum passengers
-	void setMaxPassengers(int maxPassengers);
+	//Inline Mutator function to set the maximum passengers
+	inline void setMaxPassengers(int maxPassengers) { this->maxPassengers = maxPassengers; };
 
 	// Overloading operators
 

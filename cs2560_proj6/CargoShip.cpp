@@ -9,6 +9,8 @@
 //		contains a cargo capacity field and several overloaded operators for adding to the
 //		cargo capacity and incrementing it. It also overrides the print() method of the
 //		Ship class to print additional information about the cargo capacity.
+//		All mutator and accessor functions are declared as inilne (definitions
+//		for these are in CruiseShip.h).
 //
 //
 
@@ -22,6 +24,13 @@ CargoShip::CargoShip(std::string shipName, std::string yearBuilt, int cargoCap)
 	this->cargoCap = cargoCap;
 }
 
+
+
+/*
+	Note: All mutator and accessor funtions are defined in CargoShip.h
+*/
+
+/*
 // Accessor method for getting the cargo capacity
 int CargoShip::getCargoCapacity() const
 {
@@ -33,6 +42,7 @@ void CargoShip::setCargoCapacity(int cargoCap)
 {
 	this->cargoCap = cargoCap;
 }
+*/
 
 // Overloaded output stream operator to print the CargoShip object
 std::ostream& operator<<(std::ostream& os, const CargoShip& cargoShip)

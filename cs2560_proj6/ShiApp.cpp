@@ -49,10 +49,10 @@ int main()
 	// Prompt for 1 CruiseShip
 	CruiseShip cruiseShip;
 	cin >> cruiseShip;
-	cout << "\nYou entered: \n" << cruiseShip << endl;
+	cout << "\nYou entered (printed using cout): \n" << cruiseShip << endl;
 
 	// Test overloaded operator + (CruiseShip + n)
-	cout << cruiseShip.getName() << " + 100" << endl;
+	cout << cruiseShip.getName() << " + 100:" << endl;
 	cruiseShip = cruiseShip + 100;
 	cout << cruiseShip << endl;
 
@@ -69,7 +69,7 @@ int main()
 	// Test overloaded operator ++ (postfix)
 	cout << cruiseShip.getName() << "++ (postfix):" << endl;
 	cruiseShip++;
-	cout << cruiseShip << endl;
+	cout << cruiseShip; // final endl statement printed when doing cout for cruiseShip
 
 	// Deallocate memory
 	for (int i = 0; i < ARRAYSIZE; i++)

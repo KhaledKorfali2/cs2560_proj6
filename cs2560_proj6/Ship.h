@@ -10,7 +10,7 @@
 //		private member variables to store the name and year the ship was built, as well as
 //		public member functions to accessand modify these variables.The class also contains
 //		a virtual function to print the ship detailsand overloaded operators to inputand
-//		output ship objects.
+//		output ship objects. All mutator and accessor functions are inilne.
 //
 //
 
@@ -29,13 +29,13 @@ public:
 	// Constructor that initializes the member variables with optional parameters
 	Ship(std::string shipName = "", std::string yearBuilt = "");
 
-	// Accessor functions to get the ship name and year built
-	std::string getName() const;
-	std::string getYearBuilt() const;
+	// Inline Accessor functions to get the ship name and year built
+	inline std::string getName() const { return shipName; };
+	inline std::string getYearBuilt() const { return yearBuilt; }
 
-	// Mutator functions to set the ship name and year built
-	void setName(std::string shipName);
-	void setYearBuilt(std::string yearBuilt);
+	// Inline Mutator functions to set the ship name and year built
+	inline void setName(std::string shipName) { this->shipName = shipName; } ;
+	inline void setYearBuilt(std::string yearBuilt) { this->yearBuilt = yearBuilt; };
 
 	// Virtual function to print the ship details
 	virtual void print() const;

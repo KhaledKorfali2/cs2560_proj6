@@ -7,10 +7,12 @@
 // Description:
 //		This program defines a CruiseShip class which is a derived class of the Ship class.
 //		It contains information about the maximum number of passengers that can be on board.
-//		The class provides methods to set and get the maximum number of passengers, as well as
-//		overloaded operators to add passengers to the ship and increment the maximum number
-//		of passengers by 1. Additionally, the class provides input and output stream operator
-//		overloads for reading from and writing to files or the console.
+//		The class provides methods to set and get the maximum number of passengers (definitions
+//		for these are in CruiseShip.h), as well as overloaded operators to add passengers
+//		to the ship and increment the maximum number of passengers by 1. Additionally, the class
+//		provides input and output stream operator overloads for reading from and writing to
+//		files or the console.
+//		All mutator and accessor functions are declared inilne within CruisShip.h.
 //
 
 
@@ -24,19 +26,24 @@ CruiseShip::CruiseShip(std::string shipName, std::string yearBuilt, int maxPasse
 	this->maxPassengers = maxPassengers;
 }
 
-// Getter method for the maximum number of passengers
+/*
+	Note: All mutator and accessor funtions are defined in CruiseShip.h
+*/
+
+/*
+// Accessor function for the maximum number of passengers
 int CruiseShip::getMaxPassengers() const
 {
 	return maxPassengers;
 }
 
 
-// Setter method for the maximum number of passengers
+// Mutator function for the maximum number of passengers
 void CruiseShip::setMaxPassengers(int maxPassengers)
 {
 	this->maxPassengers = maxPassengers;
 }
-
+*/
 
 // Overloaded output stream operator to print the CruiseShip object
 std::ostream& operator<<(std::ostream& os, const CruiseShip& cruiseShip)
